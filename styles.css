@@ -45,6 +45,11 @@ li {
     margin-top: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+/* Làm mờ công việc đã hoàn thành */
+li.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
 
 button.delete {
     background-color: #ff3333;
