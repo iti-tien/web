@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const taskItem = document.createElement("li");
         taskItem.innerHTML = `
-            ${taskText}
+            <span>${taskText}</span>
             <button class="delete">Xóa</button>
+            <button class="done">Done</button>
         `;
 
         taskList.appendChild(taskItem);
@@ -22,6 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const deleteButton = taskItem.querySelector(".delete");
         deleteButton.addEventListener("click", function () {
             taskList.removeChild(taskItem);
+        });
+
+        const doneButton = taskItem.querySelector(".done");
+        doneButton.addEventListener("click", function () {
+            taskItem.classList.toggle("done");
         });
     });
 });
